@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="mdc-typography">	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Bodo Pacman Demo</title>
+		 <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+ 
+		<link
+      rel="stylesheet"
+      href="css/main.css">
+	</head>
+	<body>
+		<main class=".mdc-elevation--z1">
+			
+			<svg  id="theBigO" class="mdc-elevation--z2" width="37.5" height="37.5" >
+					  
+				  <circle cx="18.75" cy="18.75" r="18.75" fill="#f44336" stroke="none"/>
+				  <circle cx="26.25" cy="18.75" r="5" fill="#455A64" stroke="none" class="mdc-elevation--z2"/>
+				  <circle cx="11.25" cy="18.75" r="5" fill="#455A64" stroke="none" class="mdc-elevation--z3"/>        
+					
+			</svg>
+	
+			<svg  id="protagonist" width="50" height="50" class="mdc-elevation--z2">
+			
+			  <circle cx="25" cy="25" r="25" fill="#F44336" stroke="none"/>
+			  <path d="M25,25 l-21.65,-12.5 a25,25 0 0,1 43.3,0 z" fill="#90A4AE" stroke="none"/>
+			  <circle cx="40" cy="25" r="5" fill="#455A64" stroke="none"/>
+			
+			</svg>
+			
+			<svg  id="theGhost" width="50" height="50" class="mdc-elevation--z1">
+			
+			  <defs>
+			    
+			    <filter id="f1">
+			    
+			      <feOffset result="offOut" in="SourceGraphic" dx="0" dy="1"/>
+			      <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+			      values="0.4 0 0 0 0 0 0.4 0 0 0 0 0 0.4 0 0 0 0 0 0.2 0" />
+			      <feBlend in="SourceGraphic" in2="matrixOut" mode="normal" />
+			      </filter>
+			    
+			    <filter id="f2" width="200%" height="200%">
+			    
+			      <feOffset result="offOut" in="SourceGraphic" dx="0" dy="4"/>
+			      <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+			      values="0.4 0 0 0 0 0 0.4 0 0 0 0 0 0.4 0 0 0 0 0 0.2 0" />
+			      <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="4" />
+			      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+			
+			    </filter>
+			  
+			  </defs>
+			  
+			  <path d="M50,50 l0,-25 l-50,0 z" fill="#455A64" stroke="none" />
+			  <path d="M0,50 l0,-25 a25,25 0 0,1 50,0 z" fill="#607D8B" stroke="none"/> 
+			  <circle cx="35" cy="15" r="5" fill="#455A64" stroke="none" class="mdc-elevation--z2"/>
+			  <circle cx="15" cy="15" r="5" fill="#455A64" stroke="none"/>
+			  
+			
+			</svg>
+			
+			<svg  id="theDot" width="10" height="10" class="mdc-elevation--z2">
+			  
+			  <circle cx="5" cy="5" r="5" fill="#455A64" stroke="none"/>
+			
+			</svg>
+
+		</main>
+	</body>
+</html>	
